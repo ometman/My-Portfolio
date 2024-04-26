@@ -10,8 +10,8 @@ const deskModalPopup = document.querySelector('#desk-modal-popup');
 const worksObj = {
   card1: {
     featuredImg: ['./images/photos/portfolio-pic-5.png', './images/photos/portfolio-pic-5.png'],
-    title: ['Capstone', 'Capstone'],
-    type: ['CONFERENCE', 'Frontend', '2023'],
+    title: ['Conference', 'Capstone'],
+    type: ['Event', 'Frontend', '2023'],
     description: ['An up-coming conference, with conference logo, title and schedule.',
       'An up-coming conference, with conference logo, title and schedule. It includes details of the speakers, program and registration.',
       'This project is about an up-coming conference. It has conference logo, title and schedule. It includes details of the speakers, program and registration. It employs HTML, CSS, JavaScript, Bootstrap and Design UI technologies.',
