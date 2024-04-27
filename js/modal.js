@@ -28,7 +28,6 @@ const worksObj = {
     type: ['Store', 'Frontend', '2023'],
     description: ['Single page shopping site accessing Base Product and Involvement APIs. Using dynamic content,  modal for product details, and allowing comments and likes by users with accounts.',
       'Single page shopping site accessing Base Product and Involvement APIs. Using dynamic content,  modal for product details, and allowing comments and likes by users with accounts.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     ],
     technologies: ['HTML', 'CSS', 'Javascript', 'APIs', 'Webpack', 'Github', 'Bootraps', 'Wireframe', 'Jest'],
     details: 'See more',
@@ -41,10 +40,9 @@ const worksObj = {
     title: ['Library CMS', 'Uber Navigation'],
     type: ['Bookstore', 'Frontend+Backend', '2023'],
     description: ['Demonstration of Redux state management in React, performing CRUD funtionalities and indicating metrics. Athenticated and authorized users create a book with category, title, author, completion and update or edit.',
-      'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      'Demonstration of Redux state management in React, performing CRUD funtionalities and indicating metrics. Athenticated and authorized users create a book with category, title, author, completion and update or edit.',
     ],
-    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'GitHub', 'Bootstrap','APIs', 'Zeplin Design'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'GitHub', 'Bootstrap', 'APIs', 'Zeplin Design'],
     details: 'See more',
     liveLink: ['See live', 'https://github.com/ometman/react-bookstore-website'],
     sourceLink: ['Source', 'https://github.com/ometman/react-bookstore-website'],
@@ -57,7 +55,7 @@ const worksObj = {
     description: ['React-Redux app, accessing World Bank metrics on Indicators for Sub-Saharan African countries; Providing information for decision-making. Employing state management, prop drilling and libraries.',
       'React-Redux app, accessing World Bank metrics on Indicators for Sub-Saharan African countries; Providing information for decision-making. Employing state management, prop drilling and libraries.',
     ],
-    technologies: ['JavaScript', 'Webpack', 'React-Redux', 'APIs', 'GitHub', 'Jest','Axios'],
+    technologies: ['JavaScript', 'Webpack', 'React-Redux', 'APIs', 'GitHub', 'Jest', 'Axios'],
     details: 'See more',
     liveLink: ['See live', 'https://github.com/ometman/FinMetrics'],
     sourceLink: ['Source', 'https://github.com/ometman/FinMetrics'],
@@ -74,6 +72,19 @@ const worksObj = {
     details: 'See more',
     liveLink: ['See live', 'https://github.com/ometman/budget-app'],
     sourceLink: ['Source', 'https://github.com/ometman/budget-app'],
+  },
+
+  card6: {
+    featuredImg: ['./images/photos/desk-bookify.png', './images/photos/portfolio-pic-7.png'],
+    title: ['Social Library', 'Finance'],
+    type: ['Rental', 'Front+Backend', '2023'],
+    description: ['Combining React on frontend and Rails on Backend with Devise JWT athentication; for a Book reservation system, where a user can rent a book, add or remove a favorite book.',
+      'Combining React on frontend and Rails on Backend with Devise JWT athentication; for a Book reservation system, where a user can rent a book, add or remove a favorite book.',
+    ],
+    technologies: ['JavaScript', 'React', 'Ruby on Rails', 'API', 'RSpec', 'UI/UX', 'ERD', 'PosgreSql'],
+    details: 'See more',
+    liveLink: ['See live', 'https://github.com/AlierPM/bookify-backend'],
+    sourceLink: ['Source', 'https://github.com/AlierPM/bookify-frontend'],
   },
 
 };
@@ -382,7 +393,7 @@ deskWorks.innerHTML = `
                     </a>
                 </div>
             </div>
-        </div 
+        </div> 
         <!--card five -->
         <div class="card">
             <!--portfolio image one -->
@@ -422,6 +433,46 @@ deskWorks.innerHTML = `
                     </a>
                 </div>
             </div>
+        </div> 
+        <!--card six -->
+        <div class="card">
+            <!--portfolio image one -->
+            <div class="pr-photo order-1">
+                <img class="portfolio-img" src="${worksObj.card6.featuredImg[0]}" alt="4th-portfolio-photo">
+            </div>
+            <!--portfolio details one -->
+           <div class="pr-details order-0"> 
+                <!--project title-->
+                <h2 class="pr-title">
+                ${worksObj.card6.title[0]}
+                </h2>
+                <!--project type-->
+                <ul class="pr-type">
+                    <li class="no-style"> ${worksObj.card6.type[0]} </li>
+                    <li> ${worksObj.card6.type[1]} </li>
+                    <li> ${worksObj.card6.type[2]} </li>
+                </ul>
+                <!--project description-->
+                <p class="pr-description">
+                    ${worksObj.card6.description[0]}
+                </p>
+                <!--tech tags-->
+                <ul class="pr-tech-tags no-style">
+                    <li class="pr-tag">${worksObj.card6.technologies[0]}</li>
+                    <li class="pr-tag">${worksObj.card6.technologies[1]}</li>
+                    <li class="pr-tag">${worksObj.card6.technologies[2]}</li>
+                    <li class="pr-tag">${worksObj.card6.technologies[3]} </li>
+                    <li class="pr-tag">${worksObj.card6.technologies[4]}</li>
+                    <li class="pr-tag">${worksObj.card6.technologies[5]} </li>
+                    <li class="pr-tag">${worksObj.card6.technologies[6]} </li>
+                </ul>
+                <!--action button -->
+                <div class="pr-call-to-action-box">
+                    <a href="#" id="deskcard6Btn" onclick="showDeskPopup()" class="pr-call-to-action-button"> 
+                        ${worksObj.card6.details}
+                    </a>
+                </div>
+            </div>
         </div> `;
 
 // function for selecting the right card, getting card content
@@ -437,8 +488,6 @@ function showMobPopup(card) {
     mobCard = worksObj.card3;
   } else if (card === 'mobcard4Btn') {
     mobCard = worksObj.card4;
-  } else if (card === 'mobcard5Btn') {
-    mobCard = worksObj.card5;
   }
 
   //  event and dynamic content for mobile modal popup
@@ -450,7 +499,7 @@ function showMobPopup(card) {
                 ${mobCard.title[0]}
             </h2>
             <a id="popup-close-btn">
-                <span class="popup-toggle">x</span>
+                <span class="popup-toggle">&times;</span>
             </a>
         </div>
         <ul class="popup-pr-type">
@@ -461,7 +510,7 @@ function showMobPopup(card) {
         <div class="popup-pr-photo">
         <img class="popup-portfolio-img" src="${mobCard.featuredImg[0]}" alt="4th portfolio photo">
         </div>
-        <div class="popup-details ">
+        <div class="popup-details">
             <p class="popup-pr-desc">
                 ${mobCard.description[2]}.
             </p>
@@ -513,6 +562,8 @@ function showDeskPopup(card) {
     deskCard = worksObj.card4;
   } else if (card === 'deskcard5Btn') {
     deskCard = worksObj.card5;
+  } else if (card === 'deskcard6Btn') {
+    deskCard = worksObj.card6;
   }
 
   //  event and dynamic content for desktop modal popup
@@ -533,7 +584,7 @@ function showDeskPopup(card) {
           <li> ${deskCard.type[2]} </li>
       </ul>
       <div class="popup-pr-photo">
-      <img class="popup-portfolio-img" src="${deskCard.featuredImg[0]}" alt="portfolio photo">
+        <img class="popup-portfolio-img" src="${deskCard.featuredImg[0]}" alt="portfolio photo">
       </div>
       <div class="popup-details ">
           <p class="popup-pr-desc">
@@ -543,10 +594,10 @@ function showDeskPopup(card) {
               <ul class="popup-pr-techs no-style">
                   <li class="pr-tag">${deskCard.technologies[0]}</li>
                   <li class="pr-tag">${deskCard.technologies[1]}</li>
-                  <li class="pr-tag"> ${deskCard.technologies[2]}</li>
+                  <li class="pr-tag">${deskCard.technologies[2]}</li>
                   <li class="pr-tag">${deskCard.technologies[3]}</li>
                   <li class="pr-tag">${deskCard.technologies[4]}</li>
-                  <li class="pr-tag"> ${deskCard.technologies[5]}</li>
+                  <li class="pr-tag">${deskCard.technologies[5]}</li>
               </ul>
               <hr class="popup-divider">
               <div class="pr-call-to-action-box popup-action-btns">
@@ -586,6 +637,12 @@ document.querySelector('#mobcard3Btn').addEventListener(('click'), () => {
 document.querySelector('#mobcard4Btn').addEventListener(('click'), () => {
   showMobPopup('mobcard4Btn');
 });
+// document.querySelector('#mobcard5Btn').addEventListener(('click'), () => {
+//   showMobPopup('mobcard5Btn');
+// });
+// document.querySelector('#mobcard6Btn').addEventListener(('click'), () => {
+//   showMobPopup('mobcard6Btn');
+// });
 
 //  now call desk pop function
 document.querySelector('#deskcard1Btn').addEventListener(('click'), () => {
@@ -601,5 +658,8 @@ document.querySelector('#deskcard4Btn').addEventListener(('click'), () => {
   showDeskPopup('deskcard4Btn');
 });
 document.querySelector('#deskcard5Btn').addEventListener(('click'), () => {
-    showDeskPopup('deskcard5Btn');
-  });
+  showDeskPopup('deskcard5Btn');
+});
+document.querySelector('#deskcard6Btn').addEventListener(('click'), () => {
+  showDeskPopup('deskcard6Btn');
+});
