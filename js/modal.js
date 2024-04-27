@@ -9,35 +9,35 @@ const deskModalPopup = document.querySelector('#desk-modal-popup');
 // creating js object
 const worksObj = {
   card1: {
-    featuredImg: ['./images/photos/portfolio-pic-5.png', './images/photos/portfolio-pic-5.png'],
-    title: ['Conference', 'Capstone'],
+    featuredImg: ['./images/photos/conference.png', './images/photos/portfolio-pic-5.png'],
+    title: ['Conference', 'Conference'],
     type: ['Event', 'Frontend', '2023'],
-    description: ['An up-coming conference, with conference logo, title and schedule.',
+    description: ['An up-coming conference, with conference logo, title and schedule. It includes details of the speakers, program and registration.',
       'An up-coming conference, with conference logo, title and schedule. It includes details of the speakers, program and registration.',
       'This project is about an up-coming conference. It has conference logo, title and schedule. It includes details of the speakers, program and registration. It employs HTML, CSS, JavaScript, Bootstrap and Design UI technologies.',
     ],
-    technologies: ['Html', 'Css', 'JavaScript', 'Github', 'Bootraps'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'GitHub', 'Bootstrap'],
     details: 'See more',
-    liveLink: 'See live',
-    sourceLink: 'Source',
+    liveLink: ['See live', 'https://github.com/ometman/fashion-store'],
+    sourceLink: ['Source', 'https://github.com/ometman/fashion-store'],
   },
 
   card2: {
-    featuredImg: ['./images/photos/portfolio-pic-2.png', './images/photos/portfolio-pic-4.png'],
-    title: ['Multi-Post Stories', 'Multi-Post Stories'],
-    type: ['CANOPY', 'Backend', '2015'],
-    description: ['A daily selection of privately personalised carded reads; no accounts or sign-ups required. A daily selection of privately personalised carded reads; no accounts or sign-ups required.',
-      'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
+    featuredImg: ['./images/photos/fashion-store.png', './images/photos/portfolio-pic-6.png'],
+    title: ['E-Commerce', 'Multi-Post Stories'],
+    type: ['Store', 'Frontend', '2023'],
+    description: ['Single page shopping site accessing Base Product and Involvement APIs. Using dynamic content,  modal for product details, and allowing comments and likes by users with accounts.',
+      'Single page shopping site accessing Base Product and Involvement APIs. Using dynamic content,  modal for product details, and allowing comments and likes by users with accounts.',
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     ],
-    technologies: ['Html', 'Css', 'Javascript', 'Ruby on rails', 'Ruby', 'Github', 'Bootraps'],
+    technologies: ['HTML', 'CSS', 'Javascript', 'APIs', 'Webpack', 'Github', 'Bootraps', 'Wireframe', 'Jest'],
     details: 'See more',
-    liveLink: 'See live',
-    sourceLink: 'Source',
+    liveLink: ['See live', 'https://github.com/ometman/fashion-store'],
+    sourceLink: ['Source', 'https://github.com/ometman/fashion-store'],
   },
 
   card3: {
-    featuredImg: ['./images/photos/portfolio-pic-3.png', './images/photos/portfolio-pic-1.png'],
+    featuredImg: ['./images/photos/portfolio-pic-2.png', './images/photos/portfolio-pic-7.png'],
     title: ['Tonic', 'Facebook 360'],
     type: ['Canopy', 'Backend Dev', '2015'],
     description: ['A daily selection of privately personalised carded reads; no accounts or sign-ups required. A daily selection of privately personalised carded reads; no accounts or sign-ups required.',
@@ -46,12 +46,12 @@ const worksObj = {
     ],
     technologies: ['Html', 'Css', 'Javascript', 'Ruby on rails', 'Ruby', 'Github', 'Bootraps'],
     details: 'See more',
-    liveLink: 'See live',
-    sourceLink: 'Source',
+    liveLink: ['See live', 'https://github.com/ometman/fashion-store'],
+    sourceLink: ['Source', 'https://github.com/ometman/fashion-store'],
   },
 
   card4: {
-    featuredImg: ['./images/photos/portfolio-pic-1.png', './images/photos/portfolio-pic-3.png'],
+    featuredImg: ['./images/photos/portfolio-pic-3.png', './images/photos/portfolio-pic-8.png'],
     title: ['Multi-Post Stories', 'Uber Navigation'],
     type: ['Canopy', 'Backend Dev', '2015', 'Uber', 'Leader developer', '2018'],
     description: ['A daily selection of privately personalise carded reads; no accounts or sign-ups required.',
@@ -60,8 +60,8 @@ const worksObj = {
     ],
     technologies: ['Html', 'Css', 'Javascript', 'Ruby on rails', 'Ruby', 'Github', 'Bootraps'],
     details: 'See more',
-    liveLink: 'See live',
-    sourceLink: 'Source',
+    liveLink: ['See live', 'https://github.com/ometman/fashion-store'],
+    sourceLink: ['Source', 'https://github.com/ometman/fashion-store'],
   },
 };
 
@@ -219,13 +219,13 @@ deskWorks.innerHTML = `
         <div class="card">
             <!--portfolio image one -->
             <div class="pr-photo order-0">
-                <img class="portfolio-img" src="${worksObj.card1.featuredImg[1]}" alt="1st-portfolio-photo">
+                <img class="portfolio-img" src="${worksObj.card1.featuredImg[0]}" alt="1st-portfolio-photo">
             </div>
             <!--portfolio details one -->
            <div class="pr-details order-1"> 
                 <!--project title-->
                 <h2 class="pr-title">
-                    ${worksObj.card1.title[1]}
+                    ${worksObj.card1.title[0]}
                 </h2>
                 <!--project type-->
                 <ul class="pr-type">
@@ -235,14 +235,14 @@ deskWorks.innerHTML = `
                 </ul>
                 <!--project description-->
                 <p class="pr-description">
-                    ${worksObj.card1.description[1]}
+                    ${worksObj.card1.description[0]}
                 </p>
                 <!--tech tags-->
                 <ul class="pr-tech-tags no-style">
                     <li class="pr-tag">${worksObj.card1.technologies[0]}</li>
-                    <li class="pr-tag">${worksObj.card1.technologies[3]} </li>
                     <li class="pr-tag">${worksObj.card1.technologies[1]}</li>
                     <li class="pr-tag">${worksObj.card1.technologies[2]}</li>
+                    <li class="pr-tag">${worksObj.card1.technologies[3]}</li>
                 </ul>
                 <!--action button -->
                 <div class="pr-call-to-action-box">
@@ -256,13 +256,13 @@ deskWorks.innerHTML = `
         <div class="card">
             <!--portfolio image one -->
             <div class="pr-photo order-1">
-                <img class="portfolio-img" src="${worksObj.card2.featuredImg[1]}" alt="2nd-portfolio-photo">
+                <img class="portfolio-img" src="${worksObj.card2.featuredImg[0]}" alt="2nd-portfolio-photo">
             </div>
             <!--portfolio details one -->
            <div class="pr-details order-0"> 
                 <!--project title-->
                 <h2 class="pr-title">
-                ${worksObj.card2.title[1]}
+                ${worksObj.card2.title[0]}
                 </h2>
                 <!--project type-->
                 <ul class="pr-type">
@@ -272,14 +272,16 @@ deskWorks.innerHTML = `
                 </ul>
                 <!--project description-->
                 <p class="pr-description">
-                    ${worksObj.card2.description[1]}
+                    ${worksObj.card2.description[0]}
                 </p>
                 <!--tech tags-->
                 <ul class="pr-tech-tags no-style">
                     <li class="pr-tag">${worksObj.card2.technologies[0]}</li>
-                    <li class="pr-tag">${worksObj.card2.technologies[3]} </li>
                     <li class="pr-tag">${worksObj.card2.technologies[1]}</li>
                     <li class="pr-tag">${worksObj.card2.technologies[2]}</li>
+                    <li class="pr-tag">${worksObj.card2.technologies[3]}</li>
+                    <li class="pr-tag">${worksObj.card2.technologies[4]} </li>
+                    <li class="pr-tag">${worksObj.card2.technologies[5]} </li>
                 </ul>
                 <!--action button -->
                 <div class="pr-call-to-action-box">
@@ -456,7 +458,7 @@ function showDeskPopup(card) {
   <div class="popup-card">
       <div class="popup-title">
           <h2 class="popup-pr-title">
-              ${deskCard.title[1]}
+              ${deskCard.title[0]}
           </h2>
           <a id="popup-close-btn">
               <span class="popup-toggle">&times;</span>
@@ -468,11 +470,11 @@ function showDeskPopup(card) {
           <li> ${deskCard.type[2]} </li>
       </ul>
       <div class="popup-pr-photo">
-      <img class="popup-portfolio-img" src="${deskCard.featuredImg[1]}" alt="4th portfolio photo">
+      <img class="popup-portfolio-img" src="${deskCard.featuredImg[0]}" alt="portfolio photo">
       </div>
       <div class="popup-details ">
           <p class="popup-pr-desc">
-              ${deskCard.description[2]}.
+              ${deskCard.description[1]}.
           </p>
           <div class="popup-tech-info">
               <ul class="popup-pr-techs no-style">
@@ -485,12 +487,12 @@ function showDeskPopup(card) {
               </ul>
               <hr class="popup-divider">
               <div class="pr-call-to-action-box popup-action-btns">
-                  <a id="popup-livelink" href="https://ometman.github.io/first-capstone" class="live-source-btns pr-call-to-action-button">
-                      <p>${deskCard.liveLink}</p>
+                  <a id="popup-livelink" href="${deskCard.liveLink[1]}" class="live-source-btns pr-call-to-action-button">
+                      <p>${deskCard.liveLink[0]}</p>
                       <img src="./images/icons/live-icon.png" alt="a live icon">
                   </a>
-                  <a id="popup-sourcelink" href="https://github.com/ometman/first-capstone" class="live-source-btns pr-call-to-action-button">
-                      <p>${deskCard.sourceLink}</p>
+                  <a id="popup-sourcelink" href="${deskCard.sourceLink[1]}" class="live-source-btns pr-call-to-action-button">
+                      <p>${deskCard.sourceLink[0]}</p>
                       <img class="github-icon-trim" src="./images/icons/github-icon.png" alt="a github icon">
                   </a>
               </div>
