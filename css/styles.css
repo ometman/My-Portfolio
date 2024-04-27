@@ -808,6 +808,7 @@
 
   ul#languages {
     order: 1;
+    width: fit;
   }
 
   ul.frameworks-view {
@@ -816,6 +817,7 @@
 
   ul#frameworks {
     order: 3;
+    width: auto;
   }
 
   ul#skills-view {
@@ -823,6 +825,8 @@
   }
   ul#skills {
     order: 6;
+    width: auto;
+    wrap: wrap;
   }
 
   .skill-name {
@@ -893,6 +897,10 @@
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
+  }
+
+  .nextjs {
+    margin-bottom: 18px;
   }
 
   .skills-line1,
