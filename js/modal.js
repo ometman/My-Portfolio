@@ -63,6 +63,19 @@ const worksObj = {
     sourceLink: ['Source', 'https://github.com/ometman/FinMetrics'],
   },
 
+  card5: {
+    featuredImg: ['./images/photos/budget.png', './images/photos/portfolio-pic-7.png'],
+    title: ['Personal Finance', 'Finance'],
+    type: ['Budgeting', 'Front+Backend', '2023'],
+    description: ['Employing the power of Ruby on Rails and PostgreSql Database Management to create a personal budgeting app, with authentication and authorization. Users privately perform CRUD on expenses, categories and transactions.',
+      'Employing the power of Ruby on Rails and PostgreSql Database Management to create a personal budgeting app, with authentication and authorization. Users privately perform CRUD on expenses, categories and transactions.',
+    ],
+    technologies: ['Ruby on Rails', 'APIs', 'RSpec', 'MVC', 'Rubocop', 'Devise', 'Cancancan', 'ERD', 'PosgreSql'],
+    details: 'See more',
+    liveLink: ['See live', 'https://github.com/ometman/budget-app'],
+    sourceLink: ['Source', 'https://github.com/ometman/budget-app'],
+  },
+
 };
 
 // give dynamic content to the works section on mobile
@@ -368,7 +381,48 @@ deskWorks.innerHTML = `
                         ${worksObj.card4.details}
                     </a>
                 </div>
-        </div `;
+            </div>
+        </div 
+        <!--card five -->
+        <div class="card">
+            <!--portfolio image one -->
+            <div class="pr-photo order-0">
+                <img class="portfolio-img" src="${worksObj.card5.featuredImg[0]}" alt="4th-portfolio-photo">
+            </div>
+            <!--portfolio details one -->
+            <div class="pr-details order-1"> 
+                <!--project title-->
+                <h2 class="pr-title">
+                ${worksObj.card5.title[0]}
+                </h2>
+                <!--project type-->
+                <ul class="pr-type">
+                    <li class="no-style"> ${worksObj.card5.type[0]} </li>
+                    <li> ${worksObj.card5.type[1]} </li>
+                    <li> ${worksObj.card5.type[2]} </li>
+                </ul>
+                <!--project description-->
+                <p class="pr-description">
+                    ${worksObj.card5.description[0]}
+                </p>
+                <!--tech tags-->
+                <ul class="pr-tech-tags no-style">
+                    <li class="pr-tag">${worksObj.card5.technologies[0]}</li>
+                    <li class="pr-tag">${worksObj.card5.technologies[1]}</li>
+                    <li class="pr-tag">${worksObj.card5.technologies[2]}</li>
+                    <li class="pr-tag">${worksObj.card5.technologies[3]} </li>
+                    <li class="pr-tag">${worksObj.card5.technologies[4]}</li>
+                    <li class="pr-tag">${worksObj.card5.technologies[5]} </li>
+                    <li class="pr-tag">${worksObj.card5.technologies[6]} </li>
+                </ul>
+                <!--action button -->
+                <div class="pr-call-to-action-box">
+                    <a href="#" id="deskcard5Btn" onclick="showDeskPopup()" class="pr-call-to-action-button"> 
+                        ${worksObj.card5.details}
+                    </a>
+                </div>
+            </div>
+        </div> `;
 
 // function for selecting the right card, getting card content
 // making card visible and event for calling mob popup function
@@ -383,6 +437,8 @@ function showMobPopup(card) {
     mobCard = worksObj.card3;
   } else if (card === 'mobcard4Btn') {
     mobCard = worksObj.card4;
+  } else if (card === 'mobcard5Btn') {
+    mobCard = worksObj.card5;
   }
 
   //  event and dynamic content for mobile modal popup
@@ -455,6 +511,8 @@ function showDeskPopup(card) {
     deskCard = worksObj.card3;
   } else if (card === 'deskcard4Btn') {
     deskCard = worksObj.card4;
+  } else if (card === 'deskcard5Btn') {
+    deskCard = worksObj.card5;
   }
 
   //  event and dynamic content for desktop modal popup
@@ -542,3 +600,6 @@ document.querySelector('#deskcard3Btn').addEventListener(('click'), () => {
 document.querySelector('#deskcard4Btn').addEventListener(('click'), () => {
   showDeskPopup('deskcard4Btn');
 });
+document.querySelector('#deskcard5Btn').addEventListener(('click'), () => {
+    showDeskPopup('deskcard5Btn');
+  });
