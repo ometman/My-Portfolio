@@ -16,10 +16,10 @@ const worksObj = {
       'An up-coming conference, with conference logo, title and schedule. It includes details of the speakers, program and registration.',
       'This project is about an up-coming conference. It has conference logo, title and schedule. It includes details of the speakers, program and registration. It employs HTML, CSS, JavaScript, Bootstrap and Design UI technologies.',
     ],
-    technologies: ['HTML', 'CSS', 'JavaScript', 'GitHub', 'Bootstrap'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'GitHub', 'Bootstrap', 'Behance Design'],
     details: 'See more',
-    liveLink: ['See live', 'https://github.com/ometman/fashion-store'],
-    sourceLink: ['Source', 'https://github.com/ometman/fashion-store'],
+    liveLink: ['See live', 'https://ometman.github.io/conference-event'],
+    sourceLink: ['Source', 'https://github.com/ometman/conference-event'],
   },
 
   card2: {
@@ -243,6 +243,8 @@ deskWorks.innerHTML = `
                     <li class="pr-tag">${worksObj.card1.technologies[1]}</li>
                     <li class="pr-tag">${worksObj.card1.technologies[2]}</li>
                     <li class="pr-tag">${worksObj.card1.technologies[3]}</li>
+                    <li class="pr-tag">${worksObj.card1.technologies[4]}</li>
+                    <li class="pr-tag">${worksObj.card1.technologies[5]}</li>
                 </ul>
                 <!--action button -->
                 <div class="pr-call-to-action-box">
