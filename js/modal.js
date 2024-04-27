@@ -51,17 +51,17 @@ const worksObj = {
   },
 
   card4: {
-    featuredImg: ['./images/photos/portfolio-pic-3.png', './images/photos/portfolio-pic-8.png'],
-    title: ['Multi-Post Stories', 'Uber Navigation'],
-    type: ['Canopy', 'Backend Dev', '2015', 'Uber', 'Leader developer', '2018'],
-    description: ['A daily selection of privately personalise carded reads; no accounts or sign-ups required.',
+    featuredImg: ['./images/photos/bookstore-cms.png', './images/photos/portfolio-pic-8.png'],
+    title: ['Library CMS', 'Uber Navigation'],
+    type: ['Bookstore', 'Backend Dev', '2023'],
+    description: ['Demonstration of Redux state management in React, performing CRUD funtionalities and indicating metrics. Athenticated and authorized users create a book with category, title, author, completion and update or edit.',
       'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     ],
-    technologies: ['Html', 'Css', 'Javascript', 'Ruby on rails', 'Ruby', 'Github', 'Bootraps'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'GitHub', 'Bootstrap','APIs', 'Zeplin Design'],
     details: 'See more',
-    liveLink: ['See live', 'https://github.com/ometman/fashion-store'],
-    sourceLink: ['Source', 'https://github.com/ometman/fashion-store'],
+    liveLink: ['See live', 'https://github.com/ometman/react-bookstore-website'],
+    sourceLink: ['Source', 'https://github.com/ometman/react-bookstore-website'],
   },
 };
 
@@ -334,30 +334,32 @@ deskWorks.innerHTML = `
         <div class="card">
             <!--portfolio image one -->
             <div class="pr-photo order-1">
-                <img class="portfolio-img" src="${worksObj.card4.featuredImg[1]}" alt="4th-portfolio-photo">
+                <img class="portfolio-img" src="${worksObj.card4.featuredImg[0]}" alt="4th-portfolio-photo">
             </div>
             <!--portfolio details one -->
            <div class="pr-details order-0"> 
                 <!--project title-->
                 <h2 class="pr-title">
-                ${worksObj.card4.title[1]}
+                ${worksObj.card4.title[0]}
                 </h2>
                 <!--project type-->
                 <ul class="pr-type">
-                    <li class="no-style"> ${worksObj.card4.type[3]} </li>
+                    <li class="no-style"> ${worksObj.card4.type[0]} </li>
                     <li> ${worksObj.card4.type[4]} </li>
                     <li> ${worksObj.card4.type[5]} </li>
                 </ul>
                 <!--project description-->
                 <p class="pr-description">
-                    ${worksObj.card4.description[1]}
+                    ${worksObj.card4.description[0]}
                 </p>
                 <!--tech tags-->
                 <ul class="pr-tech-tags no-style">
                     <li class="pr-tag">${worksObj.card4.technologies[0]}</li>
-                    <li class="pr-tag">${worksObj.card4.technologies[3]} </li>
                     <li class="pr-tag">${worksObj.card4.technologies[1]}</li>
                     <li class="pr-tag">${worksObj.card3.technologies[2]}</li>
+                    <li class="pr-tag">${worksObj.card4.technologies[3]} </li>
+                    <li class="pr-tag">${worksObj.card3.technologies[4]}</li>
+                    <li class="pr-tag">${worksObj.card4.technologies[5]} </li>
                 </ul>
                 <!--action button -->
                 <div class="pr-call-to-action-box">
